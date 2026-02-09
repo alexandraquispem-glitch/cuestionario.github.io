@@ -1,0 +1,111 @@
+body { font-family: 'Inter', sans-serif; }
+
+.label-style {
+    display: block;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: #4B1B61;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.input-style {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background-color: #F9F8FA;
+    border: 2px solid #F0E6F5;
+    border-radius: 1.25rem;
+    outline: none;
+    transition: all 0.3s;
+    font-weight: 500;
+    color: #4B1B61;
+    appearance: none;
+}
+
+.input-style:focus { border-color: #4B1B61; background-color: white; }
+
+.input-style-note {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #FFFDF2;
+    border-radius: 1.25rem;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.handwritten {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #374151;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #4B1B61;
+    color: white;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(75, 27, 97, 0.2);
+}
+
+.btn-primary:hover { background-color: #000; transform: translateY(-2px); }
+
+/* Ajustes para móviles pequeños (iPhone SE, etc.) */
+@media (max-width: 400px) {
+    .handwritten { font-size: 1.25rem; }
+    h1 { font-size: 1.75rem !important; }
+    .p-6 { padding: 1.5rem; }
+}
+
+/* ===== FONDO ESTILO ILUSTRACIÓN ===== */
+.page-background {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("chikawa.jpg"); /* luego la cambias */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay suave morado */
+.page-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(75, 27, 97, 0.55),
+        rgba(75, 27, 97, 0.65)
+    );
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+/* Para que el contenido quede encima del overlay */
+.page-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Nueva clase para el texto informativo */
+.inicio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #7b5194; 
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+
+.inicio strong {
+    color: #4B1B61;
+    font-weight: 600;
+}

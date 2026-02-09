@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzón Anónimo - Ángeles D1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="LOGO ÁNGELES VERTICAL - OFICIAL.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-background min-h-screen flex items-center justify-center p-4 sm:p-8">
+
+    <div
+        class="w-full max-w-2xl bg-white rounded-[2rem] sm:rounded-[3rem] shadow-2xl border border-purple-100 overflow-hidden">
+
+        <div class="p-6 sm:p-10 md:p-14">
+
+            <header class="text-center mb-8">
+                <h1 class="text-[#4B1B61] text-3xl sm:text-4xl font-black italic uppercase tracking-tighter">
+                    Buzón Anónimo
+                </h1>
+                <p class="text-gray-400 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] mt-2">
+                    Movimientos que transforman <span class="text-[#4B1B61] font-bold">Vidas</span>
+                </p>
+            </header>
+            <p class="inicio">Este es un espacio seguro y 100% anónimo. No guardamos tu nombre ni tu ubicación. Usa las opciones de
+                abajo para contarnos qué sucede; si no estás seguro de cuál elegir, marca 'Otros'. Tu bienestar es lo
+                más importante para nosotros.</p>
+                <br>
+            <form id="formBuzon" class="space-y-6">
+                <div class="flex flex-col">
+                    <label class="label-style">¿Tipo de situación?</label>
+                    <select id="tipo" required class="input-style text-sm sm:text-base">
+                        <option value="Bullying">Bullying</option>
+                        <option value="Riesgo fuera de la ONG">Riesgo fuera de la ONG</option>
+                        <option value="Riesgo para un compañeroa">Riesgo para un compañero</option>
+                        <option value="Problemas de convivencia con el personal">Problemas de convivencia con el
+                            personal</option>
+                        <option value="Seguridad y espacios">Seguridad y espacios</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="label-style">Detalles del reporte</label>
+                    <textarea id="contenido" required rows="4" class="input-style-note handwritten text-xl sm:text-2xl"
+                        placeholder="Escribe aquí..."></textarea>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="label-style">Acción solicitada</label>
+                    <select id="actuacion" required class="input-style text-sm sm:text-base">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Solo quiero que lo sepan">Solo quiero que lo sepan</option>
+                        <option value="Me gustaria que alguien lo revizara con calma">Revisión con calma</option>
+                        <option value="Necesito hablar con alguien de confianza lo antes posible">Urgente: Hablar con
+                            alguien</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary text-sm sm:text-base">
+                    Enviar Reporte Anónimo
+                </button>
+            </form>
+
+            <footer class="mt-8 text-center">
+                <p class="text-[9px] text-gray-400 uppercase tracking-widest">Seguridad Cifrada & Anonimato Total</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
